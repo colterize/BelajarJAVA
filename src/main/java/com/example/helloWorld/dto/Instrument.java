@@ -1,6 +1,6 @@
 package com.example.helloWorld.dto;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "instruments")

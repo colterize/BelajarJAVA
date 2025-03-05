@@ -2,6 +2,7 @@ package com.example.helloWorld.controller;
 
 import com.example.helloWorld.dto.Instrument;
 import com.example.helloWorld.repository.InstrumentRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -11,13 +12,10 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/instruments")
+@RequiredArgsConstructor
 public class InstrumentController {
 
     private final InstrumentRepository instrumentRepository;
-
-    public InstrumentController(InstrumentRepository instrumentRepository) {
-        this.instrumentRepository = instrumentRepository;
-    }
 
     @GetMapping
     public List<Instrument> getAllInstruments() {
